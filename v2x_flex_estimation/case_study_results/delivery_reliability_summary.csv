@@ -1,0 +1,5 @@
+window,strategy,Successful,Partial,Failed
+15-17,median,99.35,0.33,0.33
+15-17,q3,61.11,37.91,0.98
+17.5-20,median,99.02,0.65,0.33
+17.5-20,q3,29.41,62.75,7.84
