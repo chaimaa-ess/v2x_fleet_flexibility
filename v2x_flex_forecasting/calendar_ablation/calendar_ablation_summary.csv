@@ -1,4 +1,0 @@
-k,calendar_config,calendar_description,n_parameters,val_mae,val_rmse,val_r2,mae_rank
-1,B,history + historical calendar,70144,90.7513934314465,145.09431845003667,0.9530859724887487,1.0
-4,B,history + historical calendar,70144,94.10600290275853,149.4028706274882,0.9502583973494949,1.0
-48,B,history + historical calendar,70144,98.46553170399783,154.36558295113574,0.9469237684388891,1.0
