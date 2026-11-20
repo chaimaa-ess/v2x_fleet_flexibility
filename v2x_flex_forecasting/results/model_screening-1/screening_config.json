@@ -1,0 +1,829 @@
+{
+  "dataset": "residential",
+  "k": 48,
+  "history_steps": 672,
+  "horizon": 96,
+  "input_channels": 7,
+  "calendar": "historical TOD/DOW cyclic only",
+  "models": [
+    "xgboost",
+    "cnn_lstm",
+    "tcn",
+    "patchtst"
+  ],
+  "budget_per_model": 20,
+  "seed": 42,
+  "max_epochs_neural": 50,
+  "patience_neural": 8,
+  "batch_size_neural": 128,
+  "train_ratio": 0.8,
+  "val_ratio": 0.05,
+  "test_ratio": 0.15,
+  "selection_metric": "validation MAE in original physical units",
+  "test_evaluated": false,
+  "diagnostics": {
+    "k": 48,
+    "history_steps": 672,
+    "horizon": 96,
+    "freq": "15min",
+    "candidate_origins": 63698,
+    "valid_samples": 63698,
+    "rejected_samples": 0,
+    "rejected_missing_history": 0,
+    "rejected_missing_target": 0,
+    "rejected_missing_both": 0,
+    "rejected_nonfinite_history": 0,
+    "rejected_nonfinite_target": 0,
+    "rejected_nonfinite_both": 0
+  },
+  "sampled_configs": {
+    "xgboost": [
+      {
+        "n_estimators": 1000,
+        "max_depth": 5,
+        "learning_rate": 0.03,
+        "subsample": 0.9,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 1,
+        "reg_lambda": 1.0,
+        "reg_alpha": 0.0
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": 5,
+        "learning_rate": 0.03,
+        "subsample": 1.0,
+        "colsample_bytree": 0.7,
+        "min_child_weight": 10,
+        "reg_lambda": 5.0,
+        "reg_alpha": 0.0
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": 3,
+        "learning_rate": 0.03,
+        "subsample": 1.0,
+        "colsample_bytree": 0.9,
+        "min_child_weight": 5,
+        "reg_lambda": 10.0,
+        "reg_alpha": 0.0
+      },
+      {
+        "n_estimators": 1000,
+        "max_depth": 7,
+        "learning_rate": 0.03,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 10,
+        "reg_lambda": 10.0,
+        "reg_alpha": 0.1
+      },
+      {
+        "n_estimators": 600,
+        "max_depth": 3,
+        "learning_rate": 0.03,
+        "subsample": 0.7,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 5,
+        "reg_lambda": 5.0,
+        "reg_alpha": 0.0
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": 7,
+        "learning_rate": 0.1,
+        "subsample": 0.7,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 1,
+        "reg_lambda": 10.0,
+        "reg_alpha": 0.1
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": 7,
+        "learning_rate": 0.05,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "min_child_weight": 10,
+        "reg_lambda": 1.0,
+        "reg_alpha": 0.01
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": 5,
+        "learning_rate": 0.05,
+        "subsample": 1.0,
+        "colsample_bytree": 0.7,
+        "min_child_weight": 5,
+        "reg_lambda": 1.0,
+        "reg_alpha": 0.0
+      },
+      {
+        "n_estimators": 1000,
+        "max_depth": 7,
+        "learning_rate": 0.03,
+        "subsample": 1.0,
+        "colsample_bytree": 0.9,
+        "min_child_weight": 5,
+        "reg_lambda": 5.0,
+        "reg_alpha": 0.0
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": 5,
+        "learning_rate": 0.03,
+        "subsample": 0.9,
+        "colsample_bytree": 0.9,
+        "min_child_weight": 1,
+        "reg_lambda": 1.0,
+        "reg_alpha": 0.1
+      },
+      {
+        "n_estimators": 1000,
+        "max_depth": 5,
+        "learning_rate": 0.05,
+        "subsample": 1.0,
+        "colsample_bytree": 0.9,
+        "min_child_weight": 1,
+        "reg_lambda": 10.0,
+        "reg_alpha": 0.1
+      },
+      {
+        "n_estimators": 1000,
+        "max_depth": 7,
+        "learning_rate": 0.03,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 10,
+        "reg_lambda": 1.0,
+        "reg_alpha": 0.01
+      },
+      {
+        "n_estimators": 1000,
+        "max_depth": 3,
+        "learning_rate": 0.03,
+        "subsample": 0.9,
+        "colsample_bytree": 0.7,
+        "min_child_weight": 5,
+        "reg_lambda": 5.0,
+        "reg_alpha": 0.0
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": 3,
+        "learning_rate": 0.1,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 5,
+        "reg_lambda": 1.0,
+        "reg_alpha": 0.01
+      },
+      {
+        "n_estimators": 1000,
+        "max_depth": 3,
+        "learning_rate": 0.05,
+        "subsample": 1.0,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 1,
+        "reg_lambda": 5.0,
+        "reg_alpha": 0.01
+      },
+      {
+        "n_estimators": 600,
+        "max_depth": 5,
+        "learning_rate": 0.1,
+        "subsample": 0.7,
+        "colsample_bytree": 1.0,
+        "min_child_weight": 1,
+        "reg_lambda": 1.0,
+        "reg_alpha": 0.0
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": 3,
+        "learning_rate": 0.05,
+        "subsample": 0.7,
+        "colsample_bytree": 0.7,
+        "min_child_weight": 5,
+        "reg_lambda": 10.0,
+        "reg_alpha": 0.1
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": 3,
+        "learning_rate": 0.05,
+        "subsample": 0.7,
+        "colsample_bytree": 0.7,
+        "min_child_weight": 1,
+        "reg_lambda": 1.0,
+        "reg_alpha": 0.01
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": 5,
+        "learning_rate": 0.03,
+        "subsample": 0.7,
+        "colsample_bytree": 0.9,
+        "min_child_weight": 5,
+        "reg_lambda": 1.0,
+        "reg_alpha": 0.1
+      },
+      {
+        "n_estimators": 300,
+        "max_depth": 7,
+        "learning_rate": 0.05,
+        "subsample": 0.9,
+        "colsample_bytree": 0.7,
+        "min_child_weight": 5,
+        "reg_lambda": 1.0,
+        "reg_alpha": 0.0
+      }
+    ],
+    "cnn_lstm": [
+      {
+        "conv_channels": 32,
+        "kernel_size": 7,
+        "lstm_hidden": 128,
+        "lstm_layers": 1,
+        "dropout": 0.1,
+        "head_hidden": 256,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001
+      },
+      {
+        "conv_channels": 32,
+        "kernel_size": 5,
+        "lstm_hidden": 128,
+        "lstm_layers": 1,
+        "dropout": 0.0,
+        "head_hidden": 256,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0001
+      },
+      {
+        "conv_channels": 64,
+        "kernel_size": 3,
+        "lstm_hidden": 128,
+        "lstm_layers": 2,
+        "dropout": 0.0,
+        "head_hidden": 128,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001
+      },
+      {
+        "conv_channels": 32,
+        "kernel_size": 3,
+        "lstm_hidden": 128,
+        "lstm_layers": 1,
+        "dropout": 0.1,
+        "head_hidden": 128,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0
+      },
+      {
+        "conv_channels": 64,
+        "kernel_size": 3,
+        "lstm_hidden": 128,
+        "lstm_layers": 1,
+        "dropout": 0.0,
+        "head_hidden": 128,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0
+      },
+      {
+        "conv_channels": 64,
+        "kernel_size": 3,
+        "lstm_hidden": 64,
+        "lstm_layers": 1,
+        "dropout": 0.2,
+        "head_hidden": 128,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0
+      },
+      {
+        "conv_channels": 64,
+        "kernel_size": 7,
+        "lstm_hidden": 64,
+        "lstm_layers": 1,
+        "dropout": 0.2,
+        "head_hidden": 256,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0001
+      },
+      {
+        "conv_channels": 64,
+        "kernel_size": 5,
+        "lstm_hidden": 64,
+        "lstm_layers": 1,
+        "dropout": 0.2,
+        "head_hidden": 128,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0001
+      },
+      {
+        "conv_channels": 64,
+        "kernel_size": 3,
+        "lstm_hidden": 64,
+        "lstm_layers": 1,
+        "dropout": 0.1,
+        "head_hidden": 256,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0
+      },
+      {
+        "conv_channels": 32,
+        "kernel_size": 5,
+        "lstm_hidden": 128,
+        "lstm_layers": 2,
+        "dropout": 0.0,
+        "head_hidden": 256,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0
+      },
+      {
+        "conv_channels": 64,
+        "kernel_size": 7,
+        "lstm_hidden": 64,
+        "lstm_layers": 1,
+        "dropout": 0.1,
+        "head_hidden": 256,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0
+      },
+      {
+        "conv_channels": 64,
+        "kernel_size": 7,
+        "lstm_hidden": 64,
+        "lstm_layers": 1,
+        "dropout": 0.0,
+        "head_hidden": 256,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0
+      },
+      {
+        "conv_channels": 32,
+        "kernel_size": 5,
+        "lstm_hidden": 128,
+        "lstm_layers": 2,
+        "dropout": 0.0,
+        "head_hidden": 256,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001
+      },
+      {
+        "conv_channels": 64,
+        "kernel_size": 3,
+        "lstm_hidden": 64,
+        "lstm_layers": 2,
+        "dropout": 0.1,
+        "head_hidden": 256,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0
+      },
+      {
+        "conv_channels": 64,
+        "kernel_size": 7,
+        "lstm_hidden": 64,
+        "lstm_layers": 2,
+        "dropout": 0.1,
+        "head_hidden": 256,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0
+      },
+      {
+        "conv_channels": 64,
+        "kernel_size": 7,
+        "lstm_hidden": 64,
+        "lstm_layers": 1,
+        "dropout": 0.2,
+        "head_hidden": 128,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0001
+      },
+      {
+        "conv_channels": 32,
+        "kernel_size": 7,
+        "lstm_hidden": 128,
+        "lstm_layers": 2,
+        "dropout": 0.2,
+        "head_hidden": 256,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001
+      },
+      {
+        "conv_channels": 32,
+        "kernel_size": 3,
+        "lstm_hidden": 64,
+        "lstm_layers": 1,
+        "dropout": 0.2,
+        "head_hidden": 256,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001
+      },
+      {
+        "conv_channels": 32,
+        "kernel_size": 3,
+        "lstm_hidden": 128,
+        "lstm_layers": 1,
+        "dropout": 0.2,
+        "head_hidden": 128,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0
+      },
+      {
+        "conv_channels": 64,
+        "kernel_size": 3,
+        "lstm_hidden": 128,
+        "lstm_layers": 2,
+        "dropout": 0.0,
+        "head_hidden": 256,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0
+      }
+    ],
+    "tcn": [
+      {
+        "channels": 32,
+        "kernel_size": 5,
+        "dropout": 0.2,
+        "head_hidden": 128,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0
+      },
+      {
+        "channels": 64,
+        "kernel_size": 5,
+        "dropout": 0.0,
+        "head_hidden": 256,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0001
+      },
+      {
+        "channels": 32,
+        "kernel_size": 5,
+        "dropout": 0.0,
+        "head_hidden": 256,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0001
+      },
+      {
+        "channels": 64,
+        "kernel_size": 3,
+        "dropout": 0.2,
+        "head_hidden": 128,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0
+      },
+      {
+        "channels": 32,
+        "kernel_size": 3,
+        "dropout": 0.2,
+        "head_hidden": 128,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001
+      },
+      {
+        "channels": 32,
+        "kernel_size": 5,
+        "dropout": 0.1,
+        "head_hidden": 256,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001
+      },
+      {
+        "channels": 32,
+        "kernel_size": 3,
+        "dropout": 0.1,
+        "head_hidden": 256,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0
+      },
+      {
+        "channels": 64,
+        "kernel_size": 5,
+        "dropout": 0.2,
+        "head_hidden": 128,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0
+      },
+      {
+        "channels": 64,
+        "kernel_size": 3,
+        "dropout": 0.0,
+        "head_hidden": 256,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0001
+      },
+      {
+        "channels": 32,
+        "kernel_size": 3,
+        "dropout": 0.0,
+        "head_hidden": 128,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0
+      },
+      {
+        "channels": 64,
+        "kernel_size": 5,
+        "dropout": 0.2,
+        "head_hidden": 128,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0001
+      },
+      {
+        "channels": 32,
+        "kernel_size": 3,
+        "dropout": 0.1,
+        "head_hidden": 128,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0
+      },
+      {
+        "channels": 32,
+        "kernel_size": 5,
+        "dropout": 0.0,
+        "head_hidden": 256,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001
+      },
+      {
+        "channels": 64,
+        "kernel_size": 3,
+        "dropout": 0.1,
+        "head_hidden": 256,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0
+      },
+      {
+        "channels": 64,
+        "kernel_size": 3,
+        "dropout": 0.1,
+        "head_hidden": 128,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0001
+      },
+      {
+        "channels": 64,
+        "kernel_size": 3,
+        "dropout": 0.2,
+        "head_hidden": 128,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001
+      },
+      {
+        "channels": 64,
+        "kernel_size": 5,
+        "dropout": 0.1,
+        "head_hidden": 256,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0001
+      },
+      {
+        "channels": 32,
+        "kernel_size": 5,
+        "dropout": 0.2,
+        "head_hidden": 256,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0
+      },
+      {
+        "channels": 64,
+        "kernel_size": 3,
+        "dropout": 0.2,
+        "head_hidden": 128,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0001
+      },
+      {
+        "channels": 32,
+        "kernel_size": 5,
+        "dropout": 0.1,
+        "head_hidden": 128,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0
+      }
+    ],
+    "patchtst": [
+      {
+        "patch_len": 32,
+        "stride": 16,
+        "d_model": 64,
+        "n_heads": 4,
+        "n_layers": 2,
+        "dim_feedforward": 128,
+        "dropout": 0.0,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0
+      },
+      {
+        "patch_len": 24,
+        "stride": 8,
+        "d_model": 64,
+        "n_heads": 8,
+        "n_layers": 3,
+        "dim_feedforward": 256,
+        "dropout": 0.2,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0
+      },
+      {
+        "patch_len": 32,
+        "stride": 8,
+        "d_model": 128,
+        "n_heads": 8,
+        "n_layers": 3,
+        "dim_feedforward": 256,
+        "dropout": 0.1,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0
+      },
+      {
+        "patch_len": 24,
+        "stride": 16,
+        "d_model": 128,
+        "n_heads": 4,
+        "n_layers": 3,
+        "dim_feedforward": 256,
+        "dropout": 0.0,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0001
+      },
+      {
+        "patch_len": 32,
+        "stride": 16,
+        "d_model": 64,
+        "n_heads": 8,
+        "n_layers": 2,
+        "dim_feedforward": 256,
+        "dropout": 0.2,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0001
+      },
+      {
+        "patch_len": 32,
+        "stride": 8,
+        "d_model": 128,
+        "n_heads": 8,
+        "n_layers": 3,
+        "dim_feedforward": 128,
+        "dropout": 0.1,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0
+      },
+      {
+        "patch_len": 32,
+        "stride": 16,
+        "d_model": 128,
+        "n_heads": 8,
+        "n_layers": 3,
+        "dim_feedforward": 128,
+        "dropout": 0.0,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001
+      },
+      {
+        "patch_len": 32,
+        "stride": 16,
+        "d_model": 128,
+        "n_heads": 4,
+        "n_layers": 2,
+        "dim_feedforward": 128,
+        "dropout": 0.0,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0
+      },
+      {
+        "patch_len": 32,
+        "stride": 16,
+        "d_model": 64,
+        "n_heads": 4,
+        "n_layers": 3,
+        "dim_feedforward": 256,
+        "dropout": 0.1,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0001
+      },
+      {
+        "patch_len": 16,
+        "stride": 8,
+        "d_model": 64,
+        "n_heads": 4,
+        "n_layers": 3,
+        "dim_feedforward": 128,
+        "dropout": 0.2,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0001
+      },
+      {
+        "patch_len": 32,
+        "stride": 16,
+        "d_model": 128,
+        "n_heads": 8,
+        "n_layers": 2,
+        "dim_feedforward": 256,
+        "dropout": 0.1,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001
+      },
+      {
+        "patch_len": 32,
+        "stride": 8,
+        "d_model": 128,
+        "n_heads": 8,
+        "n_layers": 2,
+        "dim_feedforward": 128,
+        "dropout": 0.0,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0
+      },
+      {
+        "patch_len": 24,
+        "stride": 8,
+        "d_model": 64,
+        "n_heads": 8,
+        "n_layers": 3,
+        "dim_feedforward": 128,
+        "dropout": 0.1,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0
+      },
+      {
+        "patch_len": 32,
+        "stride": 16,
+        "d_model": 128,
+        "n_heads": 4,
+        "n_layers": 2,
+        "dim_feedforward": 128,
+        "dropout": 0.2,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001
+      },
+      {
+        "patch_len": 32,
+        "stride": 8,
+        "d_model": 64,
+        "n_heads": 8,
+        "n_layers": 3,
+        "dim_feedforward": 256,
+        "dropout": 0.1,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0
+      },
+      {
+        "patch_len": 32,
+        "stride": 16,
+        "d_model": 128,
+        "n_heads": 8,
+        "n_layers": 3,
+        "dim_feedforward": 256,
+        "dropout": 0.1,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001
+      },
+      {
+        "patch_len": 16,
+        "stride": 16,
+        "d_model": 128,
+        "n_heads": 4,
+        "n_layers": 3,
+        "dim_feedforward": 128,
+        "dropout": 0.1,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0
+      },
+      {
+        "patch_len": 16,
+        "stride": 16,
+        "d_model": 128,
+        "n_heads": 8,
+        "n_layers": 3,
+        "dim_feedforward": 128,
+        "dropout": 0.2,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0001
+      },
+      {
+        "patch_len": 32,
+        "stride": 8,
+        "d_model": 128,
+        "n_heads": 4,
+        "n_layers": 3,
+        "dim_feedforward": 256,
+        "dropout": 0.2,
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0001
+      },
+      {
+        "patch_len": 32,
+        "stride": 16,
+        "d_model": 64,
+        "n_heads": 4,
+        "n_layers": 2,
+        "dim_feedforward": 128,
+        "dropout": 0.1,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0
+      }
+    ]
+  }
+}
