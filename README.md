@@ -43,7 +43,7 @@ Installation instructions and dependencies are available in the official OPLEM r
 
 ### EV fleet flexibility forecasting
 
-The forecasting experiments were developed in a separate Python environment: `requirements_forecasting.txt` file .
+The forecasting experiments were developed in a separate Python environment: `v2x_flex_forecasting/requirements_forecasting.txt` file .
 
 ## Data availability
 
