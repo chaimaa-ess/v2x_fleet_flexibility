@@ -1,0 +1,33 @@
+{
+  "status": "complete",
+  "signature": "87a9265e984bb6ed256cfa87d89a446778fe2330dc30927c413ba9e0ac9021f9",
+  "dataset": "commercial",
+  "lead": 1,
+  "model": "ridge",
+  "config": {
+    "alpha": 1000.0
+  },
+  "L": 672,
+  "H": 96,
+  "frequency": "15min",
+  "calendar": "history",
+  "seed": 42,
+  "train_ratio": 0.8,
+  "val_ratio": 0.05,
+  "boundaries": {
+    "train_end": "2023-04-06 04:36:00",
+    "val_end": "2023-04-28 15:23:15",
+    "raw_first": "2022-04-12 00:00:00",
+    "raw_last": "2023-07-04 23:45:00"
+  },
+  "data": {
+    "path": "C:\\Users\\egi3essayc\\OneDrive - Nottingham Trent University\\Postdoc Archive\\T3.5\\V2X_prediction\\V2X_estimation_new\\v2x_forecasting\\Data\\commercial\\polytope_agg_com_df.pkl",
+    "size_bytes": 1084543,
+    "mtime_ns": 1791485759000000000,
+    "first": "2022-04-12 00:00:00",
+    "last": "2023-07-04 23:45:00",
+    "rows": 20832
+  },
+  "cnn_protocol": null,
+  "training_info": {}
+}
