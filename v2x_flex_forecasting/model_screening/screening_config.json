@@ -1,0 +1,200 @@
+{
+  "dataset": "residential",
+  "k": 48,
+  "history_steps": 672,
+  "horizon": 96,
+  "input_channels": 7,
+  "calendar": "historical TOD/DOW cyclic only",
+  "models": [
+    "random_forest"
+  ],
+  "budget_per_model": 20,
+  "seed": 42,
+  "max_epochs_neural": 50,
+  "patience_neural": 8,
+  "batch_size_neural": 128,
+  "train_ratio": 0.8,
+  "val_ratio": 0.05,
+  "test_ratio": 0.15,
+  "selection_metric": "validation MAE in original physical units",
+  "test_evaluated": false,
+  "diagnostics": {
+    "k": 48,
+    "history_steps": 672,
+    "horizon": 96,
+    "freq": "15min",
+    "candidate_origins": 63698,
+    "valid_samples": 63698,
+    "rejected_samples": 0,
+    "rejected_missing_history": 0,
+    "rejected_missing_target": 0,
+    "rejected_missing_both": 0,
+    "rejected_nonfinite_history": 0,
+    "rejected_nonfinite_target": 0,
+    "rejected_nonfinite_both": 0
+  },
+  "sampled_configs": {
+    "random_forest": [
+      {
+        "n_estimators": 600,
+        "max_depth": null,
+        "max_features": "sqrt",
+        "min_samples_leaf": 1,
+        "min_samples_split": 5,
+        "bootstrap": true
+      },
+      {
+        "n_estimators": 200,
+        "max_depth": 20,
+        "max_features": "sqrt",
+        "min_samples_leaf": 1,
+        "min_samples_split": 5,
+        "bootstrap": true
+      },
+      {
+        "n_estimators": 200,
+        "max_depth": null,
+        "max_features": "sqrt",
+        "min_samples_leaf": 4,
+        "min_samples_split": 2,
+        "bootstrap": true
+      },
+      {
+        "n_estimators": 600,
+        "max_depth": 20,
+        "max_features": "sqrt",
+        "min_samples_leaf": 1,
+        "min_samples_split": 2,
+        "bootstrap": true
+      },
+      {
+        "n_estimators": 200,
+        "max_depth": 40,
+        "max_features": 0.5,
+        "min_samples_leaf": 4,
+        "min_samples_split": 5,
+        "bootstrap": true
+      },
+      {
+        "n_estimators": 200,
+        "max_depth": 40,
+        "max_features": "sqrt",
+        "min_samples_leaf": 4,
+        "min_samples_split": 10,
+        "bootstrap": true
+      },
+      {
+        "n_estimators": 200,
+        "max_depth": 40,
+        "max_features": "sqrt",
+        "min_samples_leaf": 2,
+        "min_samples_split": 2,
+        "bootstrap": true
+      },
+      {
+        "n_estimators": 200,
+        "max_depth": 20,
+        "max_features": "sqrt",
+        "min_samples_leaf": 4,
+        "min_samples_split": 10,
+        "bootstrap": true
+      },
+      {
+        "n_estimators": 600,
+        "max_depth": null,
+        "max_features": 1.0,
+        "min_samples_leaf": 4,
+        "min_samples_split": 10,
+        "bootstrap": true
+      },
+      {
+        "n_estimators": 200,
+        "max_depth": null,
+        "max_features": 1.0,
+        "min_samples_leaf": 4,
+        "min_samples_split": 10,
+        "bootstrap": true
+      },
+      {
+        "n_estimators": 600,
+        "max_depth": null,
+        "max_features": 0.5,
+        "min_samples_leaf": 1,
+        "min_samples_split": 10,
+        "bootstrap": true
+      },
+      {
+        "n_estimators": 600,
+        "max_depth": 40,
+        "max_features": 0.5,
+        "min_samples_leaf": 2,
+        "min_samples_split": 2,
+        "bootstrap": true
+      },
+      {
+        "n_estimators": 400,
+        "max_depth": 40,
+        "max_features": "sqrt",
+        "min_samples_leaf": 2,
+        "min_samples_split": 5,
+        "bootstrap": true
+      },
+      {
+        "n_estimators": 200,
+        "max_depth": null,
+        "max_features": 1.0,
+        "min_samples_leaf": 2,
+        "min_samples_split": 5,
+        "bootstrap": true
+      },
+      {
+        "n_estimators": 400,
+        "max_depth": 40,
+        "max_features": 0.5,
+        "min_samples_leaf": 4,
+        "min_samples_split": 5,
+        "bootstrap": true
+      },
+      {
+        "n_estimators": 400,
+        "max_depth": 20,
+        "max_features": "sqrt",
+        "min_samples_leaf": 1,
+        "min_samples_split": 2,
+        "bootstrap": true
+      },
+      {
+        "n_estimators": 200,
+        "max_depth": null,
+        "max_features": "sqrt",
+        "min_samples_leaf": 4,
+        "min_samples_split": 10,
+        "bootstrap": true
+      },
+      {
+        "n_estimators": 200,
+        "max_depth": null,
+        "max_features": "sqrt",
+        "min_samples_leaf": 4,
+        "min_samples_split": 5,
+        "bootstrap": true
+      },
+      {
+        "n_estimators": 200,
+        "max_depth": null,
+        "max_features": 1.0,
+        "min_samples_leaf": 2,
+        "min_samples_split": 10,
+        "bootstrap": true
+      },
+      {
+        "n_estimators": 200,
+        "max_depth": 40,
+        "max_features": "sqrt",
+        "min_samples_leaf": 1,
+        "min_samples_split": 5,
+        "bootstrap": true
+      }
+    ]
+  }
+}
