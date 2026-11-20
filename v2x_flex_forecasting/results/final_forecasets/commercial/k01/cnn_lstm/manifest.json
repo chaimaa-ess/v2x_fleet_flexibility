@@ -1,0 +1,51 @@
+{
+  "status": "complete",
+  "signature": "5b10d1798fa3ed76c2954aac53c120c4aa80447cc77088d22cd6a9acf4c8eac3",
+  "dataset": "commercial",
+  "lead": 1,
+  "model": "cnn_lstm",
+  "config": {
+    "conv_channels": 64,
+    "kernel_size": 5,
+    "lstm_hidden": 128,
+    "lstm_layers": 1,
+    "dropout": 0.05,
+    "head_hidden": 256,
+    "learning_rate": 0.0005,
+    "weight_decay": 1e-05
+  },
+  "L": 672,
+  "H": 96,
+  "frequency": "15min",
+  "calendar": "history",
+  "seed": 42,
+  "train_ratio": 0.8,
+  "val_ratio": 0.05,
+  "boundaries": {
+    "train_end": "2023-04-06 04:36:00",
+    "val_end": "2023-04-28 15:23:15",
+    "raw_first": "2022-04-12 00:00:00",
+    "raw_last": "2023-07-04 23:45:00"
+  },
+  "data": {
+    "path": "C:\\Users\\egi3essayc\\OneDrive - Nottingham Trent University\\Postdoc Archive\\T3.5\\V2X_prediction\\V2X_estimation_new\\v2x_forecasting\\Data\\commercial\\polytope_agg_com_df.pkl",
+    "size_bytes": 1084543,
+    "mtime_ns": 1791485759000000000,
+    "first": "2022-04-12 00:00:00",
+    "last": "2023-07-04 23:45:00",
+    "rows": 20832
+  },
+  "cnn_protocol": {
+    "batch_size": 128,
+    "max_epochs": 50,
+    "patience": 8,
+    "loss": "scaled MSE",
+    "optimizer": "AdamW",
+    "gradient_clip": 1.0
+  },
+  "training_info": {
+    "best_epoch": 4,
+    "epochs_trained": 12,
+    "best_val_loss_scaled": 0.3991862398977498
+  }
+}
